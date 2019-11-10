@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>Create Folder</title>
+<style type="text/css">
+.fullscreen-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(90, 90, 90, 0.5);
+  z-index: 9999;
+}
+
+#popdiv {
+  padding: 25px;
+  height: 300px;
+  width: 320px;
+  background-color: white;
+  position: fixed;
+  left: 38%;
+  right: 50%;
+  top:20%;
+
+}
+
+
+body {
+  padding-top: 65px;
+}
+</style>
+</head>
+<body>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<button id="but1">Open dialog</button>
+
+<div class="fullscreen-container">	
+  <div id="popdiv">
+    <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Folder Name</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name"
+    required>
+    <small id="emailHelp" class="form-text text-muted">Folder name should not be duplicate.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Description</label>
+    <input type="text" class="form-control" id="exampleInputPassword1s" placeholder="Fill the reason of this folder."
+     required>
+  </div>
+  <!-- <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div> -->
+  <div id="button">
+  <button type="submit" class="btn btn-success">Submit</button>
+   <button id="but2" class="btn btn-danger">Cancel</button>
+</div>
+</form>
+  </div>
+</div>
+<script type="text/javascript">
+$(function() {
+  $("#but1").click(function() {
+    $(".fullscreen-container").fadeTo(200, 1);
+  });
+  $("#but2").click(function() {
+    $(".fullscreen-container").fadeOut(200);
+  });
+});
+</script>
+</body>
+</html>
